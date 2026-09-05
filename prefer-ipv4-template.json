@@ -18,6 +18,79 @@
       "store_dns": true
     }
   },
+  "dns": {
+    "servers": [
+      {
+        "tag": "Local-DNS",
+        "type": "tls",
+        "server_port": 853,
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "Local-DNS-Resolver",
+        "type": "udp",
+        "server_port": 53,
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "Remote-DNS",
+        "type": "tls",
+        "detour": "🚀 节点选择",
+        "server_port": 853,
+        "server": "8.8.8.8"
+      },
+      {
+        "tag": "Remote-DNS-Resolver",
+        "type": "udp",
+        "detour": "🚀 节点选择",
+        "server_port": 53,
+        "server": "8.8.8.8"
+      }
+    ],
+    "rules": [
+      {
+        "action": "route",
+        "clash_mode": "direct",
+        "server": "Local-DNS"
+      },
+      {
+        "action": "route",
+        "clash_mode": "global",
+        "server": "Remote-DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoSite-Private"
+        ],
+        "server": "Local-DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoLocation-CN"
+        ],
+        "server": "Local-DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoSite-CN"
+        ],
+        "server": "Local-DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GeoLocation-!CN"
+        ],
+        "server": "Remote-DNS"
+      }
+    ],
+    "final": "Local-DNS-Resolver",
+    "optimistic": true,
+    "strategy": "prefer_ipv4"
+  },
   "inbounds": [
     {
       "type": "tun",
@@ -61,7 +134,7 @@
         "🇸🇬 Singapore",
         "🇯🇵 Japan",
         "🇺🇸 United States",
-        "🔐 MITM",
+        "🌍 Regions",
         "🎯 Direct"
       ]
     },
@@ -86,7 +159,7 @@
         "🇸🇬 Singapore",
         "🇯🇵 Japan",
         "🇺🇸 United States",
-        "🔐 MITM",
+        "🌍 Regions",
         "🎯 Direct"
       ]
     },
@@ -246,22 +319,6 @@
       ]
     },
     {
-      "type": "selector",
-      "tag": "🧭 Others",
-      "interrupt_exist_connections": true,
-      "outbounds": [
-        "⚡ 自动选择",
-        "🚀 节点选择",
-        "🇭🇰 Hong Kong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🔐 MITM",
-        "🎯 Direct"
-      ]
-    },
-    {
       "type": "direct",
       "tag": "🎯 Direct"
     },
@@ -333,7 +390,7 @@
     },
     {
       "type": "urltest",
-      "tag": "🔐 MITM",
+      "tag": "🌍 Regions",
       "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -341,6 +398,7 @@
       "interrupt_exist_connections": true
     }
   ],
+  "endpoints": [],
   "route": {
     "rules": [
       {
@@ -804,79 +862,5 @@
     "default_domain_resolver": {
       "server": "Local-DNS"
     }
-  },
-  "dns": {
-    "servers": [
-      {
-        "tag": "Local-DNS",
-        "type": "tls",
-        "server_port": 853,
-        "server": "223.5.5.5"
-      },
-      {
-        "tag": "Local-DNS-Resolver",
-        "type": "udp",
-        "server_port": 53,
-        "server": "223.5.5.5"
-      },
-      {
-        "tag": "Remote-DNS",
-        "type": "tls",
-        "detour": "🚀 节点选择",
-        "server_port": 853,
-        "server": "8.8.8.8"
-      },
-      {
-        "tag": "Remote-DNS-Resolver",
-        "type": "udp",
-        "detour": "🚀 节点选择",
-        "server_port": 53,
-        "server": "8.8.8.8"
-      }
-    ],
-    "rules": [
-      {
-        "action": "route",
-        "clash_mode": "direct",
-        "server": "Local-DNS"
-      },
-      {
-        "action": "route",
-        "clash_mode": "global",
-        "server": "Remote-DNS"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoSite-Private"
-        ],
-        "server": "Local-DNS"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoLocation-CN"
-        ],
-        "server": "Local-DNS"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoSite-CN"
-        ],
-        "server": "Local-DNS"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoLocation-!CN"
-        ],
-        "server": "Remote-DNS"
-      }
-    ],
-    "final": "Local-DNS-Resolver",
-    "optimistic": true,
-    "strategy": "ipv4_only"
-  },
-  "endpoints": []
+  }
 }
