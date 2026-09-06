@@ -5,3 +5,6 @@ ClaudeRules.conf
 cache.db
 *.log
 .DS_Store
+
+# 待删除的临时备份（无法在本地代理里直接删除文件，先移到这里）
+_to_delete/
