@@ -141,9 +141,7 @@
     {
       "type": "urltest",
       "tag": "⚡ 自动选择",
-      "outbounds": [
-        "🎯 Direct"
-      ],
+      "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50,
@@ -351,9 +349,7 @@
     {
       "type": "urltest",
       "tag": "🇭🇰 Hong Kong",
-      "outbounds": [
-        "🎯 Direct"
-      ],
+      "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50,
@@ -362,9 +358,7 @@
     {
       "type": "urltest",
       "tag": "🇹🇼 Taiwan",
-      "outbounds": [
-        "🎯 Direct"
-      ],
+      "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50,
@@ -373,9 +367,7 @@
     {
       "type": "urltest",
       "tag": "🇸🇬 Singapore",
-      "outbounds": [
-        "🎯 Direct"
-      ],
+      "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50,
@@ -384,9 +376,7 @@
     {
       "type": "urltest",
       "tag": "🇯🇵 Japan",
-      "outbounds": [
-        "🎯 Direct"
-      ],
+      "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50,
@@ -395,9 +385,7 @@
     {
       "type": "urltest",
       "tag": "🇺🇸 United States",
-      "outbounds": [
-        "🎯 Direct"
-      ],
+      "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50,
@@ -407,9 +395,7 @@
       "type": "selector",
       "tag": "🗺️ Regions",
       "interrupt_exist_connections": true,
-      "outbounds": [
-        "🎯 Direct"
-      ]
+      "outbounds": []
     }
   ],
   "endpoints": [],
