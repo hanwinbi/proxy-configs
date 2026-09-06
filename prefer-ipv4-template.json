@@ -336,17 +336,6 @@
       ]
     },
     {
-      "type": "selector",
-      "tag": "GLOBAL",
-      "interrupt_exist_connections": true,
-      "outbounds": [
-        "🚀 节点选择",
-        "⚡ 自动选择",
-        "🎯 Direct",
-        "🐟 漏网之鱼"
-      ]
-    },
-    {
       "type": "urltest",
       "tag": "🇭🇰 Hong Kong",
       "outbounds": [],
@@ -419,7 +408,7 @@
       {
         "action": "route",
         "clash_mode": "global",
-        "outbound": "GLOBAL"
+        "outbound": "🚀 节点选择"
       },
       {
         "action": "route",
@@ -464,7 +453,18 @@
       },
       {
         "action": "reject",
-        "protocol": "quic"
+        "protocol": "quic",
+        "rule_set": [
+          "Youtube",
+          "Google",
+          "Netflix",
+          "Spotify",
+          "X",
+          "Disney",
+          "TikTok",
+          "FaceBook",
+          "GlobalMedia"
+        ]
       },
       {
         "action": "route",
