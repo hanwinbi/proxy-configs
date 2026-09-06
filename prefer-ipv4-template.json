@@ -131,10 +131,9 @@
         "⚡ 自动选择",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
-        "🇯🇵 Japan",
-        "🗺️ Regions",
-        "🇺🇸 United States",
         "🇸🇬 Singapore",
+        "🇯🇵 Japan",
+        "🇺🇸 United States",
         "🎯 Direct"
       ]
     },
@@ -155,10 +154,10 @@
         "⚡ 自动选择",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
-        "🇯🇵 Japan",
-        "🗺️ Regions",
-        "🇺🇸 United States",
         "🇸🇬 Singapore",
+        "🇯🇵 Japan",
+        "🇺🇸 United States",
+        "🗺️ Regions",
         "🎯 Direct"
       ]
     },
@@ -170,6 +169,9 @@
         "🎯 Direct",
         "🌍 Outside",
         "🇭🇰 Hong Kong",
+        "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
         "🇺🇸 United States"
       ]
     },
@@ -179,10 +181,11 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🌍 Outside",
-        "🇺🇸 United States",
+        "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
         "🇯🇵 Japan",
-        "🗺️ Regions"
+        "🇺🇸 United States"
       ]
     },
     {
@@ -202,10 +205,9 @@
         "🌍 Outside",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
-        "🇯🇵 Japan",
-        "🗺️ Regions",
-        "🇺🇸 United States",
         "🇸🇬 Singapore",
+        "🇯🇵 Japan",
+        "🇺🇸 United States",
         "🎯 Direct"
       ]
     },
@@ -215,9 +217,10 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎬 Global Media",
-        "🇸🇬 Singapore",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
         "🇺🇸 United States"
       ]
     },
@@ -228,9 +231,10 @@
       "outbounds": [
         "🎯 Direct",
         "🎬 Global Media",
-        "🇸🇬 Singapore",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
         "🇺🇸 United States"
       ]
     },
@@ -240,9 +244,10 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎬 Global Media",
-        "🇸🇬 Singapore",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
         "🇺🇸 United States"
       ]
     },
@@ -265,7 +270,6 @@
         "🇹🇼 Taiwan",
         "🇸🇬 Singapore",
         "🇯🇵 Japan",
-        "🗺️ Regions",
         "🇺🇸 United States"
       ]
     },
@@ -285,9 +289,10 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎬 Global Media",
-        "🇸🇬 Singapore",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
         "🇺🇸 United States"
       ]
     },
@@ -306,9 +311,10 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎬 Global Media",
-        "🇸🇬 Singapore",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
         "🇺🇸 United States"
       ]
     },
