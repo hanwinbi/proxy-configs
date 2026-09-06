@@ -1,0 +1,7 @@
+# 含真实订阅 token，不进公开仓库
+qx_config.conf
+
+# 常见运行时/系统文件
+cache.db
+*.log
+.DS_Store
