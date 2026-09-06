@@ -8,7 +8,7 @@
     "clash_api": {
       "external_controller": "127.0.0.1:20123",
       "external_ui_download_detour": "🎯 Direct",
-      "secret": "CHANGE_ME_BEFORE_USE",
+      "secret": "123456",
       "default_mode": "rule",
       "access_control_allow_private_network": false
     },
@@ -87,7 +87,7 @@
         "server": "Remote-DNS"
       }
     ],
-    "final": "Local-DNS-Resolver",
+    "final": "Remote-DNS",
     "optimistic": true,
     "strategy": "prefer_ipv4"
   },
@@ -131,21 +131,23 @@
         "⚡ 自动选择",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
         "🇯🇵 Japan",
+        "🗺️ Regions",
         "🇺🇸 United States",
-        "🌍 Regions",
+        "🇸🇬 Singapore",
         "🎯 Direct"
       ]
     },
     {
       "type": "urltest",
       "tag": "⚡ 自动选择",
-      "outbounds": [],
+      "outbounds": [
+        "🎯 Direct"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "selector",
@@ -153,13 +155,12 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "⚡ 自动选择",
-        "🚀 节点选择",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
         "🇯🇵 Japan",
+        "🗺️ Regions",
         "🇺🇸 United States",
-        "🌍 Regions",
+        "🇸🇬 Singapore",
         "🎯 Direct"
       ]
     },
@@ -191,7 +192,8 @@
         "🌍 Outside",
         "🇺🇸 United States",
         "🇹🇼 Taiwan",
-        "🇯🇵 Japan"
+        "🇯🇵 Japan",
+        "🗺️ Regions"
       ]
     },
     {
@@ -213,6 +215,7 @@
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
         "🇯🇵 Japan",
+        "🗺️ Regions",
         "🇺🇸 United States",
         "🇸🇬 Singapore",
         "🎯 Direct"
@@ -266,6 +269,20 @@
     },
     {
       "type": "selector",
+      "tag": "🏎️ Speedtest",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 Direct",
+        "🇭🇰 Hong Kong",
+        "🇹🇼 Taiwan",
+        "🇸🇬 Singapore",
+        "🇯🇵 Japan",
+        "🗺️ Regions",
+        "🇺🇸 United States"
+      ]
+    },
+    {
+      "type": "selector",
       "tag": "✈️ Telegram",
       "interrupt_exist_connections": true,
       "outbounds": [
@@ -300,12 +317,11 @@
       "tag": "🌐 Google",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "🌍 Outside",
+        "🎬 Global Media",
+        "🇸🇬 Singapore",
         "🇭🇰 Hong Kong",
         "🇹🇼 Taiwan",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🇸🇬 Singapore"
+        "🇺🇸 United States"
       ]
     },
     {
@@ -327,8 +343,7 @@
       "tag": "🐟 漏网之鱼",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "⚡ 自动选择",
-        "🚀 节点选择",
+        "🌍 Outside",
         "🎯 Direct"
       ]
     },
@@ -346,56 +361,65 @@
     {
       "type": "urltest",
       "tag": "🇭🇰 Hong Kong",
-      "outbounds": [],
+      "outbounds": [
+        "🎯 Direct"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
       "tag": "🇹🇼 Taiwan",
-      "outbounds": [],
+      "outbounds": [
+        "🎯 Direct"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
       "tag": "🇸🇬 Singapore",
-      "outbounds": [],
+      "outbounds": [
+        "🎯 Direct"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
       "tag": "🇯🇵 Japan",
-      "outbounds": [],
+      "outbounds": [
+        "🎯 Direct"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
       "tag": "🇺🇸 United States",
-      "outbounds": [],
+      "outbounds": [
+        "🎯 Direct"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
-      "type": "urltest",
-      "tag": "🌍 Regions",
-      "outbounds": [],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 0,
-      "interrupt_exist_connections": true
+      "type": "selector",
+      "tag": "🗺️ Regions",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 Direct"
+      ]
     }
   ],
   "endpoints": [],
@@ -440,21 +464,21 @@
         "rule_set": [
           "GeoSite-CN"
         ],
-        "outbound": "🎯 Direct"
+        "outbound": "🇨🇳 Mainland"
       },
       {
         "action": "route",
         "rule_set": [
           "GeoLocation-CN"
         ],
-        "outbound": "🎯 Direct"
+        "outbound": "🇨🇳 Mainland"
       },
       {
         "action": "route",
         "rule_set": [
           "GeoIP-CN"
         ],
-        "outbound": "🎯 Direct"
+        "outbound": "🇨🇳 Mainland"
       },
       {
         "action": "reject",
@@ -544,6 +568,13 @@
       {
         "action": "route",
         "rule_set": [
+          "Speedtest"
+        ],
+        "outbound": "🏎️ Speedtest"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "bilibili",
           "bilibili@!cn",
           "bilibili-cdn",
@@ -607,7 +638,7 @@
       {
         "tag": "OpenAI",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-openai.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-openai.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -616,7 +647,7 @@
       {
         "tag": "Claude",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-anthropic.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-anthropic.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -625,7 +656,7 @@
       {
         "tag": "Gemini",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-google-gemini.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google-gemini.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -634,7 +665,7 @@
       {
         "tag": "Telegram",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-telegram.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-telegram.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -643,7 +674,7 @@
       {
         "tag": "Telegram_IP",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/lyc8503/sing-box-rules/refs/heads/rule-set-geoip/geoip-telegram.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/lyc8503/sing-box-rules@rule-set-geoip/geoip-telegram.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -652,7 +683,7 @@
       {
         "tag": "Github",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-github.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-github.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -661,7 +692,7 @@
       {
         "tag": "Google",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-google.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -670,7 +701,7 @@
       {
         "tag": "X",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-x.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-x.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -679,7 +710,7 @@
       {
         "tag": "Youtube",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-youtube.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-youtube.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -688,7 +719,7 @@
       {
         "tag": "Netflix",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-netflix.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-netflix.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -697,7 +728,7 @@
       {
         "tag": "Spotify",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-spotify.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-spotify.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -706,7 +737,7 @@
       {
         "tag": "Apple",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-apple.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -715,7 +746,7 @@
       {
         "tag": "Microsoft",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-microsoft.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -724,7 +755,7 @@
       {
         "tag": "Bing",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bing.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bing.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -733,7 +764,7 @@
       {
         "tag": "Bing-CN",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bing@cn.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bing@cn.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -778,7 +809,7 @@
       {
         "tag": "Disney",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-disney.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-disney.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -787,7 +818,7 @@
       {
         "tag": "TikTok",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-tiktok.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-tiktok.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -796,7 +827,7 @@
       {
         "tag": "FaceBook",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-facebook.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-facebook.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
@@ -851,6 +882,15 @@
         "tag": "GeoLocation-!CN",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+        "format": "binary",
+        "http_client": {
+          "detour": "🚀 节点选择"
+        }
+      },
+      {
+        "tag": "Speedtest",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-speedtest.srs",
         "format": "binary",
         "http_client": {
           "detour": "🚀 节点选择"
