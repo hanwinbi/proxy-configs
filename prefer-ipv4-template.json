@@ -166,15 +166,6 @@
     },
     {
       "type": "selector",
-      "tag": "🇨🇳 Mainland",
-      "interrupt_exist_connections": true,
-      "outbounds": [
-        "🎯 Direct",
-        "🌍 Outside"
-      ]
-    },
-    {
-      "type": "selector",
       "tag": "🍎 Apple",
       "interrupt_exist_connections": true,
       "outbounds": [
@@ -201,9 +192,8 @@
       "tag": "📺 China Media",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "🇨🇳 Mainland",
-        "🌍 Outside",
-        "🎯 Direct"
+        "🎯 Direct",
+        "🌍 Outside"
       ]
     },
     {
@@ -464,21 +454,21 @@
         "rule_set": [
           "GeoSite-CN"
         ],
-        "outbound": "🇨🇳 Mainland"
+        "outbound": "🎯 Direct"
       },
       {
         "action": "route",
         "rule_set": [
           "GeoLocation-CN"
         ],
-        "outbound": "🇨🇳 Mainland"
+        "outbound": "🎯 Direct"
       },
       {
         "action": "route",
         "rule_set": [
           "GeoIP-CN"
         ],
-        "outbound": "🇨🇳 Mainland"
+        "outbound": "🎯 Direct"
       },
       {
         "action": "reject",
