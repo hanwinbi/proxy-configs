@@ -1,0 +1,15 @@
+# NAME: XiaoHongShu (含 RedNote 海外版)
+# NOTE: 小红书国内版与海外版 (rednote) App 的完整域名分流规则
+#       xiaohongshu.com / xhscdn.com / xhscdn.net / fengkongcloud.com 收录自
+#       blackmatrix7/ios_rule_script 的 XiaoHongShu.list
+#       rnote.com / rednotecdn.com 是 rednote App 实测抓包确认的主力域名
+#       (edith.rnote.com 承担国内版 edith.xiaohongshu.com 的角色，91% 的请求走这里)，
+#       上游 XiaoHongShu.list 与 v2fly/domain-list-community issue #4056 均尚未收录，
+#       故合并自建为完整规则集，待上游收录后可替换
+# UPDATED: 2026-09-19
+HOST-SUFFIX,xiaohongshu.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.net,XiaoHongShu
+HOST-SUFFIX,fengkongcloud.com,XiaoHongShu
+HOST-SUFFIX,rnote.com,XiaoHongShu
+HOST-SUFFIX,rednotecdn.com,XiaoHongShu
