@@ -18,6 +18,12 @@
       "store_dns": true
     }
   },
+  "ntp": {
+    "enabled": true,
+    "server": "time.apple.com",
+    "interval": "30m",
+    "detour": "🎯 Direct"
+  },
   "dns": {
     "servers": [
       {
@@ -69,13 +75,6 @@
         "action": "route",
         "rule_set": [
           "GeoLocation-CN"
-        ],
-        "server": "Local-DNS"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoSite-CN"
         ],
         "server": "Local-DNS"
       },
@@ -427,13 +426,6 @@
         "action": "route",
         "rule_set": [
           "GeoIP-Private"
-        ],
-        "outbound": "🎯 Direct"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "GeoSite-CN"
         ],
         "outbound": "🎯 Direct"
       },
@@ -843,15 +835,6 @@
         }
       },
       {
-        "tag": "GeoSite-CN",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
-        "format": "binary",
-        "http_client": {
-          "detour": "🚀 节点选择"
-        }
-      },
-      {
         "tag": "GeoIP-CN",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
@@ -880,7 +863,7 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🚀 节点选择",
+    "final": "🐟 漏网之鱼",
     "default_domain_resolver": {
       "server": "Local-DNS"
     }
